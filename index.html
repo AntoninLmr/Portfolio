@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Portfolio</title>
+</head>
+<body>
+    <header>
+        <nav class="nav">
+            <div class="nav__title">
+                <a href="index.html">AL</a>
+            </div>
+            <ul class="nav__list">
+                <li class="nav__item"><a href="#">ABOUT</a></li>
+            </ul>
+        </nav>
+    </header>
+<section>
+    <h1>Welcome !!</h1>
+    <p>test</p>
+    <p>test2</p>
+    
+    <!-- Flèches de navigation -->
+    <button class="nav-arrow prev"><b>&#10094;</b></button>
+    <button class="nav-arrow next"><b>&#10095;</b></button>
+
+    <div class="container">
+        <div class="image-gallery">
+            <img src="img/traviaV2.png" alt="travia"
+            data-link="travia.html"
+            data-time="4 mois"
+            data-members="4 personnes"
+            data-role="Développeur front-end"
+            data-img1="<img src="img/travia1" alt="travia1"
+            data-langage="<i class='fa-brands fa-html5'></i> <i class='fa-brands fa-css3-alt'></i> <i class='fa-brands fa-square-js'></i> <i class='fa-brands fa-php'></i> <i class='fa-solid fa-database'></i> <i class='fa-brands fa-java'></i> <i class='fa-solid fa-c'></i>">
+            
+            <img src="img/unescoV2.png" alt="unesco" 
+            data-link="unesco.html"
+            data-time="10 mois"
+            data-members="6 personnes"
+            data-role="Développeur backend"
+            data-langage="<i class='fa-brands fa-html5'></i> <i class='fa-brands fa-css3-alt'></i> <i class='fa-brands fa-square-js'></i> <i class='fa-brands fa-php'></i> <i class='fa-solid fa-database'></i>">
+
+            <img src="img/bankaiV2.png" alt="bankai" 
+            data-link=""
+            data-time="3 mois"
+            data-members="5 personnes"
+            data-role="Scrum Master"
+            data-langage="<i class='fa-brands fa-html5'></i> <i class='fa-brands fa-css3-alt'></i> <i class='fa-brands fa-square-js'></i> <i class='fa-brands fa-php'></i> <i class='fa-solid fa-database'></i>">
+
+            <img src="img/javaV2.png" alt="java" 
+            data-link=""
+            data-time="4 mois"
+            data-members="2 personnes"
+            data-role="Développeur / Rédacteur technique"
+            data-langage="<i class='fa-brands fa-html5'></i> <i class='fa-brands fa-css3-alt'></i> <i class='fa-brands fa-square-js'></i> <i class='fa-brands fa-php'></i> <i class='fa-solid fa-database'></i>">
+
+            <img src="img/qixV2.png" alt="qix" 
+            data-link=""
+            data-time="4 mois"
+            data-members="2 personnes"
+            data-role="Développeur / Gardien du temps"
+            data-langage="<i class='fa-brands fa-html5'></i> <i class='fa-brands fa-css3-alt'></i> <i class='fa-brands fa-square-js'></i> <i class='fa-brands fa-php'></i> <i class='fa-solid fa-database'></i>">
+
+            <img src="img/reseauV2.png" alt="reseau" 
+            data-link=""
+            data-time="3 semaines"
+            data-members="3 personnes"
+            data-role="Administrateur réseau"
+            data-langage="<i class='fa-brands fa-html5'></i> <i class='fa-brands fa-css3-alt'></i> <i class='fa-brands fa-square-js'></i> <i class='fa-brands fa-php'></i> <i class='fa-solid fa-database'></i>">
+
+            <img src="img/accademieV2.png" alt="accademie" 
+            data-link=""
+            data-time="4 mois"
+            data-members="2 personnes"
+            data-role="Développeur fullstack"
+            data-langage="<i class='fa-brands fa-html5'></i> <i class='fa-brands fa-css3-alt'></i> <i class='fa-brands fa-square-js'></i> <i class='fa-brands fa-php'></i> <i class='fa-solid fa-database'></i>">
+
+            <img src="img/tennisV2.png" alt="tennis" 
+            data-link=""
+            data-time="Is comming"
+            data-members="1 personnes"
+            data-role="Designeur / Développeur front-end"
+            data-langage="Is comming">
+
+            <img src="" alt="sncf" 
+            data-link=""
+            data-time="Is comming"
+            data-members="5 personnes"
+            data-role="Is comming"
+            data-langage="Is comming">
+
+            <img src="" alt="wikispeedia" 
+            data-link=""
+            data-time=""
+            data-members="4 personnes"
+            data-role=""
+            data-langage="Is comming">
+        </div>
+    </div>
+    <!-- Lightbox petite -->
+    <div class="lightbox" id="lightbox">
+        <span class="close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+        <a href="#" class="explore-btn" id="explore-btn"><strong><u>EXPLORE</u></strong></a>
+        <div class="lightbox-bas">
+            <div class="lightbox-left">
+                <p><strong><b><u>Date :</u></b></strong> <span id="lightbox-date"></span></p>
+                <p><strong><b><u>Membres :</u></b></strong> <span id="lightbox-members"></span></p>
+            </div>
+            <div class="lightbox-right">
+                <p><strong><b><u>Langages :</u></b></strong> <span id="lightbox-langages"></span></p>
+                <p><strong><b><u>Rôle :</u></b></strong> <span id="lightbox-role"></span></p>
+            </div>
+        </div>
+    </div>
+
+</section>
+    <!-- Section des compétences -->
+<section class="skills">
+    <h2>Mes Compétences</h2>
+    <div class="skills-container">
+        <div class="skill-box">
+            <i class="fa-brands fa-html5"></i>
+            <h3>HTML</h3>
+            <p>Structuration de pages web avec HTML5.</p>
+        </div>
+        <div class="skill-box">
+            <i class="fa-brands fa-css3-alt"></i>
+            <h3>CSS</h3>
+            <p>Styles et animations avec CSS3 et Tailwind.</p>
+        </div>
+        <div class="skill-box">
+            <i class="fa-brands fa-square-js"></i>
+            <h3>JavaScript</h3>
+            <p>Interactions dynamiques avec Vanilla JS.</p>
+        </div>
+        <div class="skill-box">
+            <i class="fa-brands fa-php"></i>
+            <h3>PHP</h3>
+            <p>Développement backend avec PHP et MySQL.</p>
+        </div>
+        <div class="skill-box">
+            <i class="fa-brands fa-java"></i>
+            <h3>Java</h3>
+            <p>Programmation orientée objet et applications.</p>
+        </div>
+        <div class="skill-box">
+            <i class="fa-solid fa-network-wired"></i>
+            <h3>Réseaux</h3>
+            <p>Configuration et administration de réseaux.</p>
+        </div>
+    </div>
+</section>
+
+
+    <script>
+        // Pour la lightbox petite
+        // Sélection des éléments
+        const images = document.querySelectorAll('.image-gallery img');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const closeBtn = document.querySelector('.close');
+        const exploreBtn = document.getElementById('explore-btn');
+
+        // Sélection des conteneurs pour les infos
+        const lightboxDate = document.getElementById('lightbox-date');
+        const lightboxMembers = document.getElementById('lightbox-members');
+        const lightboxLangages = document.getElementById('lightbox-langages');
+        const lightboxRole = document.getElementById('lightbox-role');
+
+        // Ajout d'événements sur chaque image
+        images.forEach(image => {
+            image.addEventListener('click', () => {
+                lightbox.style.display = 'flex';
+                lightboxImg.src = image.src;
+
+                // Récupération des informations
+                const projectLink = image.dataset.link || '#';
+                const projectDate = image.dataset.time || 'Non spécifié';
+                const projectMembers = image.dataset.members || 'Non spécifié';
+                const projectLangages = image.dataset.langage || 'Non spécifié';
+                const projectRole = image.dataset.role || 'Non spécifié';
+
+                // Mise à jour du bouton Explore
+                exploreBtn.href = projectLink !== '#' ? projectLink : '#';
+                exploreBtn.style.display = projectLink !== '#' ? 'inline-block' : 'none';
+
+                // Mise à jour des informations dans la lightbox
+                lightboxDate.textContent = projectDate;
+                lightboxMembers.textContent = projectMembers;
+                lightboxLangages.innerHTML = projectLangages; // Insère les icônes
+                lightboxRole.textContent = projectRole;
+            });
+        });
+
+        // Ferme la lightbox en cliquant sur la croix ou à l'extérieur
+        closeBtn.addEventListener('click', () => {
+            lightbox.style.display = 'none';
+        });
+
+        lightbox.addEventListener('click', (e) => {
+            if (e.target !== lightboxImg && e.target !== exploreBtn) {
+                lightbox.style.display = 'none';
+            }
+        });
+
+        // Script pour les flèches de navigation
+        const container = document.querySelector('.container');
+        const prevBtn = document.querySelector('.prev');
+        const nextBtn = document.querySelector('.next');
+
+        function updateArrows() {
+            prevBtn.style.display = container.scrollLeft > 0 ? 'block' : 'none';
+            nextBtn.style.display = (container.scrollLeft + container.clientWidth) < container.scrollWidth ? 'block' : 'none';
+        }
+
+        prevBtn.addEventListener('click', () => {
+            container.scrollBy({ left: -300, behavior: 'smooth' });
+        });
+
+        nextBtn.addEventListener('click', () => {
+            container.scrollBy({ left: 300, behavior: 'smooth' });
+        });
+
+        container.addEventListener('scroll', updateArrows);
+        updateArrows();
+    </script>
+
+</body>
+</html>
+
