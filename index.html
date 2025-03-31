@@ -117,42 +117,94 @@
     </div>
 
 </section>
-    <!-- Section des compétences -->
+
+
+<!-- Section des compétences -->
 <section class="skills">
     <h2>Mes Compétences</h2>
     <div class="skills-container">
         <div class="skill-box">
-            <i class="fa-brands fa-html5"></i>
-            <h3>HTML</h3>
-            <p>Structuration de pages web avec HTML5.</p>
+            <div class="skill-inner">
+                <div class="skill-front">
+                    <i class="fa-brands fa-html5"></i>
+                    <h3>Réaliser</h3>
+                </div>
+                <div class="skill-back">
+                    <p>blablablablabla</p>
+                </div>
+            </div>
         </div>
+
         <div class="skill-box">
-            <i class="fa-brands fa-css3-alt"></i>
-            <h3>CSS</h3>
-            <p>Styles et animations avec CSS3 et Tailwind.</p>
+            <div class="skill-inner">
+                <div class="skill-front">
+                    <i class="fa-brands fa-css3-alt"></i>
+                    <h3>Optimiser</h3>
+                </div>
+                <div class="skill-back">
+                    <p>Création de mises en page responsives avec CSS3.</p>
+                </div>
+            </div>
         </div>
+
         <div class="skill-box">
-            <i class="fa-brands fa-square-js"></i>
-            <h3>JavaScript</h3>
-            <p>Interactions dynamiques avec Vanilla JS.</p>
+            <div class="skill-inner">
+                <div class="skill-front">
+                    <i class="fa-brands fa-js"></i>
+                    <h3>Administrer</h3>
+                </div>
+                <div class="skill-back">
+                    <p>Développement interactif avec JavaScript.</p>
+                </div>
+            </div>
         </div>
+
         <div class="skill-box">
-            <i class="fa-brands fa-php"></i>
-            <h3>PHP</h3>
-            <p>Développement backend avec PHP et MySQL.</p>
+            <div class="skill-inner">
+                <div class="skill-front">
+                    <i class="fa-brands fa-react"></i>
+                    <h3>Gérer</h3>
+                </div>
+                <div class="skill-back">
+                    <p>Développement d'applications web avec React.</p>
+                </div>
+            </div>
         </div>
+
         <div class="skill-box">
-            <i class="fa-brands fa-java"></i>
-            <h3>Java</h3>
-            <p>Programmation orientée objet et applications.</p>
+            <div class="skill-inner">
+                <div class="skill-front">
+                    <i class="fa-brands fa-node-js"></i>
+                    <h3>Conduire</h3>
+                </div>
+                <div class="skill-back">
+                    <p>Développement back-end avec Node.js.</p>
+                </div>
+            </div>
         </div>
+
         <div class="skill-box">
-            <i class="fa-solid fa-network-wired"></i>
-            <h3>Réseaux</h3>
-            <p>Configuration et administration de réseaux.</p>
+            <div class="skill-inner">
+                <div class="skill-front">
+                    <i class="fa-brands fa-git"></i>
+                    <h3>Collaborer</h3>
+                </div>
+                <div class="skill-back">
+                    <p>Gestion de versions avec Git.</p>
+                </div>
+            </div>
         </div>
     </div>
 </section>
+
+<script>
+    // Sélectionne toutes les compétences
+    document.querySelectorAll(".skill-box").forEach(skill => {
+        skill.addEventListener("click", () => {
+            skill.classList.toggle("flipped"); // Ajoute ou retire la classe flipped
+        });
+    });
+</script>
 
 
     <script>
