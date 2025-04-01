@@ -1010,5 +1010,31 @@ body {
     margin-right: 8px;
 }
 
+.cv-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background-color: #007bff; /* Couleur bleue */
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cv-btn:hover {
+    background-color: #0056b3; /* Couleur bleue foncée au survol */
+    transform: scale(1.05); /* Légère mise en avant au survol */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cv-btn:active {
+    transform: scale(0.95); /* Réduction légère au clic */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
 
 
