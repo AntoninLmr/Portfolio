@@ -94,7 +94,7 @@
                 data-langage="<i class='fa-brands fa-html5'></i> <i class='fa-brands fa-css3-alt'></i> <i class='fa-brands fa-square-js'></i>">
                 
                 <img src="img/unescoV2.png" alt="unesco" 
-                data-link="unesco.html"
+                data-link=""
                 data-description="Le site de Versailles est une plateforme de médiation culturelle développée en partenariat avec l'UNESCO. Il met en avant de nombreux monuments et lieux emblématiques à visiter, ainsi qu'une sélection de restaurants et d'hôtels à découvrir. Les visiteurs peuvent également explorer des circuits de balades à vélo et en apprendre davantage sur l'histoire et le patrimoine de la ville. Un mode administrateur a été intégré afin de permettre une mise à jour régulière du contenu du site."
                 data-time="10 mois"
                 data-members="6 personnes"
@@ -102,8 +102,8 @@
                 data-langage="<i class='fa-brands fa-html5'></i> <i class='fa-brands fa-css3-alt'></i> <i class='fa-brands fa-square-js'></i> <i class='fa-brands fa-php'></i> <i class='fa-solid fa-database'></i>">
 
                 <img src="img/bankaiV2.png" alt="bankai" 
-                data-link=""
-                data-description="Le site Bankai est une plateforme conçue pour les commerçants et les entreprises afin de les aider à analyser leurs dépenses. Il leur permet de gérer efficacement leur trésorerie, leurs impayés et leurs remises grâce à de nombreux tableaux de bord interactifs et des graphiques variés, tels que des diagrammes en barres et en camembert."
+                data-link="https://dfrancekie.fr/bankai/connexion.php"
+                data-description="Le site Bankai est une plateforme conçue pour les commerçants et les entreprises afin de les aider à analyser leurs dépenses. Il leur permet de gérer efficacement leur trésorerie, leurs impayés et leurs remises grâce à de nombreux tableaux de bord interactifs et des graphiques variés, tels que des diagrammes en barres et en camembert. ID : 1001 | MDP : password123"
                 data-time="3 mois"
                 data-members="5 personnes"
                 data-role="Scrum Master"
@@ -292,8 +292,13 @@
     <div class="popup" id="popup">
         <div class="popup-content">
             <span class="close-popup">&times;</span>
-            <h2 id="popup-title"></h2>
-            <p id="popup-description"></p>
+            <div class="popup-scrollable">
+                <h2 id="popup-title" style="color: black;"></h2>
+                <p id="popup-description" style="color: black;"></p>
+                <img id="popup-image" src="" alt="Image de la compétence" style="width: 100%; margin-top: 20px; border-radius: 10px;">
+                <p id="popup-extra-description" style="margin-top: 10px; font-size: 1rem; color: black;"></p>
+                <ul id="popup-list" style="margin-top: 10px; font-size: 1rem; color: black;"></ul>
+            </div>
         </div>
     </div>
 
@@ -402,27 +407,70 @@ const closePopup = document.querySelector('.close-popup');
 const skillDescriptions = {
     "realiser": {
         title: "Réaliser",
-        description: "Ce bloc de compétence vise à garantir la conception, le développement et l’intégration d’une solution informatique conforme aux besoins d’un client. Il couvre l’ensemble du processus de réalisation, depuis l’élaboration des spécifications fonctionnelles et non fonctionnelles jusqu’à la validation finale de l’application. Il met l’accent sur l’application des principes d’accessibilité et d’ergonomie, l’adoption de bonnes pratiques de conception et de programmation, ainsi que la mise en place de tests rigoureux pour assurer la qualité et la fiabilité du produit."
+        description: "Ce bloc de compétence vise à garantir la conception, le développement et l’intégration d’une solution informatique conforme aux besoins d’un client.",
+        image: "img/bankaiV2.png",
+        extraDescription: "Voici mes points d'amméliorations :",
+        list: [
+            "Élaboration et implémentation des spécifications fonctionnelles et non fonctionnelles en fonction des besoins du client.",
+            "Application des principes d’accessibilité et d’ergonomie pour une interface intuitive et adaptée.",
+            "Amélioration de mes compétences en JavaScript, en utilisant une librairie pour créer des graphiques interactifs.",
+            "Rôle de Scrum Master, où j’ai coordonné l’équipe et m’adapté aux demandes du Product Owner."
+        ]
     },
     "optimiser": {
         title: "Optimiser",
-        description: "Ce bloc de compétence vise à développer des applications informatiques optimisées en tenant compte de divers critères tels que le temps d’exécution, la précision et la consommation de ressources. Il implique la sélection de structures de données complexes adaptées aux besoins, l’application de techniques algorithmiques efficaces pour résoudre des problèmes complexes, ainsi que la prise en compte des enjeux de sécurité des données et du code. Enfin, il intègre une réflexion sur l’impact environnemental et sociétal des solutions mises en œuvre afin de proposer des développements à la fois performants et responsables."
+        description: "Ce bloc de compétence vise à développer des applications informatiques optimisées en tenant compte de divers critères tels que le temps d’exécution, la précision et la consommation de ressources.",
+        image: "img/traviaV2.png",
+        extraDescription: "Voici mes points d'amméliorations :",
+        list: [
+            "Protection des données en utilisant des requêtes préparées avec bind param pour sécuriser les interactions avec la base de données.",
+            "Mise en place de l'algorithme de Dijkstra pour déterminer le chemin le plus rapide entre les points.",
+            "Réalisation d'un MCD pour organiser et structurer les données du projet.",
+            "Rôle de développeur où j'ai travaillé sur la communication au sein de l’équipe pour assurer une collaboration efficace."
+        ]
     },
     "administrer": {
         title: "Administrer",
-        description: "Ce bloc de compétence a pour objectif d’assurer l’administration et l’optimisation du système informatique d’une organisation. Il couvre l’installation, la configuration et la maintenance des infrastructures, des services et des réseaux, garantissant ainsi leur bon fonctionnement et leur disponibilité. Il inclut également la conception et le développement d’applications communicantes, l’utilisation de serveurs et de services réseaux virtualisés, ainsi que la sécurisation des services et des données pour protéger l’intégrité du système et des informations qu’il traite."
+        description: "Ce bloc de compétence a pour objectif d’assurer l’administration et l’optimisation du système informatique d’une organisation.",
+        image: "img/Res.png",
+        extraDescription: "Voici mes points d'amméliorations :",
+        list: [
+            "Travail sur un TP pare-feu pour sécuriser les services et les données du système.",
+            "Utilisation d’une machine virtuelle (VM) pour isoler et tester l’application en environnement sécurisé."
+        ]
     },
     "gerer": {
         title: "Gérer",
-        description: "Ce bloc de compétence vise à concevoir, gérer et exploiter les données d’une entreprise afin de garantir un accès efficace et sécurisé aux informations essentielles pour son pilotage. Il englobe l’optimisation des modèles de données, la mise en place de mesures de sécurité pour protéger les informations sensibles, ainsi que l’organisation de la restitution des données à travers des solutions de programmation et de virtualisation. De plus, il implique la manipulation de données hétérogènes afin de faciliter leur intégration et leur utilisation au sein des systèmes d’information."
+        description: "Ce bloc de compétence vise à concevoir, gérer et exploiter les données d’une entreprise afin de garantir un accès efficace et sécurisé aux informations essentielles pour son pilotage.",
+        image: "img/hessncf.png",
+        extraDescription: "Voici mes points d'amméliorations :",
+        list: [
+            "Développement d'une plateforme de réservation de billets de train en utilisant React et Node.js.",
+            "Utilisation de MongoDB pour la gestion des données, en mettant en place une structure de données bien définie pour assurer l’efficacité du système.",
+            "Rôle de développeur où j'ai travaillé sur la communication au sein de l’équipe pour assurer une collaboration efficace."
+        ]
     },
     "conduire": {
         title: "Conduire",
-        description: "Ce bloc de compétence a pour objectif d’analyser et d’optimiser les systèmes d’information en tenant compte des besoins de l’organisation et des utilisateurs. Il comprend l’identification des processus en place afin d’améliorer les solutions existantes, la formalisation des exigences des clients et des utilisateurs, ainsi que l’évaluation de la faisabilité des projets informatiques. Enfin, il couvre la définition et la mise en œuvre d’une démarche de suivi de projet, garantissant ainsi une gestion efficace et adaptée aux objectifs fixés."
+        description: "Ce bloc de compétence a pour objectif d’analyser et d’optimiser les systèmes d’information en tenant compte des besoins de l’organisation et des utilisateurs.",
+        image: "img/trello.png",
+        extraDescription: "Voici mes points d'amméliorations :",
+        list: [
+            "Création de diagrammes de Gantt pour répartir les délais sur différentes tâches et assurer un suivi efficace du planning.",
+            "Réalisation d'un diagramme de PERT pour visualiser les dépendances et la séquence des tâches dans le projet.",
+            "Mise en place d’un tableau Trello pour organiser et suivre les User Stories et les Epic Stories, facilitant ainsi la gestion des priorités et des sprints."
+        ]
     },
     "collaborer": {
         title: "Collaborer",
-        description: "Ce bloc de compétence vise à favoriser l’intégration et la collaboration au sein d’une équipe informatique dans une organisation. Il implique la compréhension de la diversité, de la structure et de l’importance de l’informatique dans un environnement professionnel. Il couvre également l’adoption d’une démarche permettant une intégration efficace dans une équipe, la mobilisation de compétences interpersonnelles pour un travail collaboratif optimal, ainsi que la capacité à rendre compte de son activité professionnelle de manière claire et structurée."
+        description: "Ce bloc de compétence vise à favoriser l’intégration et la collaboration au sein d’une équipe informatique dans une organisation.",
+        image: "img/cra.png",
+        extraDescription: "Voici mes points d'amméliorations :",
+        list: [
+            "Compréhension des dimensions de l'informatique dans les entreprises, me permettant d'appréhender les enjeux stratégiques et opérationnels des systèmes d'information.",
+            "Étude des Directions des Systèmes d'Information (DSI), ce qui m’a permis de mieux saisir leur rôle et leur fonctionnement au sein des organisations.",
+            "Rédaction des Comptes Rendus d'Activité (CRA) pour les deux SAEs de cette année, en détaillant mes actions et les résultats obtenus dans chaque projet."
+        ]
     }
 };
 
@@ -433,10 +481,23 @@ function showPopup(skillKey) {
         popupTitle.textContent = skill.title;
         popupDescription.textContent = skill.description;
         popup.style.display = 'flex';
-        
-        // Animation d'apparition
-        popup.classList.add('fade-in');
-        setTimeout(() => popup.classList.remove('fade-in'), 500);
+
+        // Met à jour l'image et la description supplémentaire
+        const popupImage = document.getElementById('popup-image');
+        const popupExtraDescription = document.getElementById('popup-extra-description');
+        const popupList = document.getElementById('popup-list');
+
+        popupImage.src = skill.image;
+        popupImage.alt = `Image de ${skill.title}`;
+        popupExtraDescription.textContent = skill.extraDescription;
+
+        // Met à jour la liste
+        popupList.innerHTML = ""; // Réinitialise la liste
+        skill.list.forEach(item => {
+            const listItem = document.createElement('li');
+            listItem.textContent = item;
+            popupList.appendChild(listItem);
+        });
     }
 }
 
