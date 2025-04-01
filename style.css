@@ -7,6 +7,8 @@ body {
     overflow-y: auto;
     text-align: center;
 }
+
+
 /* Partie header */
 .nav {
     position: sticky;
@@ -24,19 +26,8 @@ body {
     font-weight: bold;
     text-transform: uppercase;
 }
-.nav__list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-.nav__item a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    text-transform: uppercase;
-    font-size: 10px;
-}
+
+
 /* Partie img projet */
 .container {
     overflow-x: auto;
@@ -358,9 +349,114 @@ body {
     font-size: 14px;
 }
 
+.explore-btn:hover {
+    color: gold;
+}
+
+.discover-btn1 {
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    background-color: #dbe887;
+}
+.discover-btn2 {
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    background-color: #919ad7;
+}
+
+.discover-btn3 {
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    background-color: #a8e1a8;
+}
+
+.discover-btn4 {
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    background-color: #c470a8;
+}
+
+.discover-btn5 {
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    background-color: #fbee89;
+}
+
+.discover-btn6 {
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    background-color: #fdb086;
+}
+
+.discover-btn1:hover {
+    background-color: #d7ee43; 
+    transform: scale(1.05); 
+}
+
+.discover-btn2:hover {
+    background-color: rgb(77, 95, 210); 
+    transform: scale(1.05); 
+}
+
+.discover-btn3:hover {
+    background-color: #5fde5f; 
+    transform: scale(1.05); 
+}
+
+.discover-btn4:hover {
+    background-color: #c43695; 
+    transform: scale(1.05); 
+}
+
+.discover-btn5:hover {
+    background-color: #fde531; 
+    transform: scale(1.05); 
+}
+
+.discover-btn6:hover {
+    background-color: #fd8646; 
+    transform: scale(1.05); 
+}
+
+
 /* Face arrière */
 .skill-back {
-    background: #007bff;
     transform: rotateY(180deg);
     text-align: left;
     
@@ -375,72 +471,60 @@ body {
 
 /* BG face avant */
 .skill-box:nth-child(1) .skill-front {
-    background-color: red; 
+    background-color: #EEF1DA; 
 }
 
 .skill-box:nth-child(2) .skill-front {
-    background-color: #ca5c21; 
+    background-color: #ADB2D4; 
 }
 
 .skill-box:nth-child(3) .skill-front {
-    background-color: #ebda1f; 
+    background-color: #D5E5D5; 
 }
 
 .skill-box:nth-child(4) .skill-front {
-    background-color: rgb(60, 109, 60); 
+    background-color: #C599B6; 
 }
 
 .skill-box:nth-child(5) .skill-front {
-    background-color: rgb(12, 12, 142);
-    color: white; 
+    background-color: #FBF3B9;
 }
 
 .skill-box:nth-child(6) .skill-front {
-    background-color:gray; 
-    color: white;
+    background-color:#FFCDB2;
 }
 
 
 /* BG Face arriere*/
 .skill-box:nth-child(1) .skill-back {
-    background-color: red;
+    background-color: #EEF1DA;
     color: black; 
 }
 
 .skill-box:nth-child(2) .skill-back {
-    background-color: #ca5c21; 
+    background-color: #ADB2D4; 
     color: black;
 }
 
 .skill-box:nth-child(3) .skill-back {
-    background-color: #ebbf1f; 
+    background-color: #D5E5D5; 
     color: black;
 }
 
 .skill-box:nth-child(4) .skill-back {
-    background-color: rgb(60, 109, 60); 
+    background-color: #C599B6; 
     color: black;
 }
 
 .skill-box:nth-child(5) .skill-back {
-    background-color: rgb(12, 12, 142);
-    color: white; 
+    background-color: #FBF3B9;
+    color: black; 
 }
 
 .skill-box:nth-child(6) .skill-back {
-    background-color:grey; 
-    color: white;
+    background-color:#FFCDB2; 
+    color: black;
 }
-
-.skill-back a {
-    color: white; /* Changez cette couleur selon votre préférence */
-    text-decoration: none;
-}
-
-.skill-back a:hover {
-    color: rgb(157, 0, 255); /* Change la couleur au survol */
-}
-
 
 /* Effet de retournement */
 .skill-box.flipped .skill-inner {
@@ -535,7 +619,150 @@ body {
     transition: 0.3s;
 }
 
-.explore-btn:hover {
-    color: gold;
+/* Style de la pop-up */
+.popup {
+    display: none; /* Cachée par défaut */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Fond semi-transparent */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
 }
+
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 500px;
+    width: 90%;
+}
+
+.popup-content h2 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.popup-content p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.close-popup {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+}
+
+/*PARTIE  scolarité*/
+.timeline-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+
+}
+
+.timeline-line {
+    position: relative;
+    height: 4px;
+    background-color: #3498db;
+    margin: 100px 0;
+}
+
+.timeline-points {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+}
+
+.timeline-point {
+    width: 24px;
+    height: 24px;
+    background-color: #3498db;
+    border-radius: 50%;
+    border: 4px solid white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.timeline-point:hover, .timeline-point.active {
+    background-color: #2980b9;
+    transform: scale(1.2);
+}
+
+.timeline-point-date {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: bold;
+    color: #3498db;
+    white-space: nowrap;
+}
+
+.timeline-content {
+    max-width: 600px;
+    margin: 30px auto;
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+    height: 0;
+    overflow: hidden;
+}
+
+.timeline-content.active {
+    opacity: 1;
+    transform: translateY(0);
+    height: auto;
+    min-height: 150px;
+}
+
+.timeline-content h2 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.timeline-content ul {
+    margin-left: 20px;
+    margin-bottom: 10px;
+    color: black;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+    
+    .timeline-line {
+        margin: 60px 0;
+    }
+    
+    .timeline-point-date {
+        font-size: 12px;
+    }
+}
+
+
 
