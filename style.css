@@ -966,7 +966,7 @@ body {
 
     /* Augmenter l'espacement entre les blocs */
     .skills-container {
-        gap: 30px; /* Augmente l'espacement entre les blocs */
+        gap: 80px; /* Augmente l'espacement entre les blocs */
     }
 }
 
