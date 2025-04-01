@@ -161,7 +161,7 @@ body {
 /*Partie flèche java script*/
 .nav-arrow {
     position: absolute;
-    top: 150%;
+    top: 220%;
     transform: translateY(-50%);
     background: white;
     border: none;
@@ -951,6 +951,22 @@ body {
 
     .skill-front, .skill-back {
         font-size: 0.9rem; 
+    }
+
+    /* Supprimer les paragraphes des blocs de compétences */
+    .skill-front p {
+        display: none; /* Cache tous les paragraphes */
+    }
+
+    /* Augmenter l'espacement entre les titres */
+    .skill-front h3 {
+        margin-bottom: 20px; /* Ajoute un espacement sous les titres */
+        font-size: 1.2rem; /* Augmente légèrement la taille des titres */
+    }
+
+    /* Augmenter l'espacement entre les blocs */
+    .skills-container {
+        gap: 30px; /* Augmente l'espacement entre les blocs */
     }
 }
 
