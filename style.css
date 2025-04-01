@@ -204,13 +204,13 @@ body {
 .skills-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 colonnes */
-    gap: 20px; /* Espacement entre les éléments */
+    gap: 40px; /* Espacement entre les éléments */
     max-width: 900px;
     margin: 0 auto;
 }
 
 .skill-box {
-    width: 100%; /* Prend toute la largeur possible dans chaque colonne */
+    width: 110%; /* Prend toute la largeur possible dans chaque colonne */
     height: 200px;
     perspective: 1000px; /* Effet 3D */
     cursor: pointer;
@@ -244,15 +244,88 @@ body {
     background: white;
     color: black;
 }
+.skill-front h3{
+    font-size: 16px;
+}
+
+.skill-front p{
+    font-size: 14px;
+}
 
 /* Face arrière */
 .skill-back {
     background: #007bff;
-    color: white;
     transform: rotateY(180deg);
-    text-align: center;
+    text-align: left;
     
 }
+
+.skill-back p{
+    font-size: 12px;
+    margin-left: 2%;
+    margin-bottom: 1.5px;
+
+}
+
+/* BG face avant */
+.skill-box:nth-child(1) .skill-front {
+    background-color: red; 
+}
+
+.skill-box:nth-child(2) .skill-front {
+    background-color: #ca5c21; 
+}
+
+.skill-box:nth-child(3) .skill-front {
+    background-color: #ebda1f; 
+}
+
+.skill-box:nth-child(4) .skill-front {
+    background-color: rgb(60, 109, 60); 
+}
+
+.skill-box:nth-child(5) .skill-front {
+    background-color: rgb(12, 12, 142);
+    color: white; 
+}
+
+.skill-box:nth-child(6) .skill-front {
+    background-color:gray; 
+    color: white;
+}
+
+
+/* BG Face arriere*/
+.skill-box:nth-child(1) .skill-back {
+    background-color: red;
+    color: black; 
+}
+
+.skill-box:nth-child(2) .skill-back {
+    background-color: #ca5c21; 
+    color: black;
+}
+
+.skill-box:nth-child(3) .skill-back {
+    background-color: #ebbf1f; 
+    color: black;
+}
+
+.skill-box:nth-child(4) .skill-back {
+    background-color: rgb(60, 109, 60); 
+    color: black;
+}
+
+.skill-box:nth-child(5) .skill-back {
+    background-color: rgb(12, 12, 142);
+    color: white; 
+}
+
+.skill-box:nth-child(6) .skill-back {
+    background-color:grey; 
+    color: white;
+}
+
 
 /* Effet de retournement */
 .skill-box.flipped .skill-inner {
