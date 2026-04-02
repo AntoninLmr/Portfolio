@@ -27,10 +27,10 @@
             </div>
         </div>
         <p>
-            Bonjour, je suis Antonin Lemaire, actuellement étudiant en 3ème année de BUT Informatique à l'IUT <b>Gustave Eiffel</b>. Je suis également apprenti chez <b>Ariane Group</b> 
-            en tant que développeur Python. A la suite de mon BUT je souhaiterais intégrer une école d'ingénieur en Développement Logiciel afin de pouvoir 
-            devenir architecte logiciel <a href="img/CV_LEMAIRE_Antonin.pdf">Voir mon cv</a>
+            Étudiant en BUT Informatique 3ᵉ année et apprenti Data Analyst & Développeur logiciel chez ArianeGroup. Admis à l’ESIEA, j’intégrerai le cycle ingénieur en septembre 2026 et je recherche une alternance de 3 ans. <br>
+            Rythme d’alternance de 2 semaine / 2 semaine.
         </p>
+        <a href="img/CV_LEMAIRE_Antonin.pdf" class="cv-btn">Voir mon CV</a>
 
         <div class="timeline-container">
             <div class="timeline-line">
@@ -75,7 +75,101 @@
                 </ul>
             </div>
         </div>
-        
+        <br><br><br>
+        <div class="timeline-v">
+            <div class="timeline-v__line"></div>
+
+            <div class="timeline-item left" onclick="toggleTimeline(this)">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">Juin 2024 - Août 2024</div>
+                <div class="timeline-card">
+                    <div class="timeline-card-header">
+                        <img class="timeline-logo" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="Logo entreprise">
+                        <div class="timeline-card-info">
+                            <h2>Emploi saisonnier</h2>
+                            <p>Hypermarché Leclerc</p>
+                        </div>
+                    </div>
+                    <div class="timeline-details">
+                        <ul>
+                            <li>Hôte de caisse</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item right" onclick="toggleTimeline(this)">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">Août 2024 - Août 2025</div>
+                <div class="timeline-card">
+                    <div class="timeline-card-header">
+                        <img class="timeline-logo" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="Logo entreprise">
+                        <div class="timeline-card-info">
+                            <h2>CDI Etudiant</h2>
+                            <p>La Poste Groupe</p>
+                        </div>
+                    </div>
+                    <div class="timeline-details">
+                        <ul>
+                            <li>Chargé de clientèle</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item left" data-company="ArianeGroup" onclick="toggleTimeline(this)">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">Avr 2025 - Juil 2025</div>
+                <div class="timeline-card">
+                    <div class="timeline-card-header">
+                        <img class="timeline-logo" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="Logo entreprise">
+                        <div class="timeline-card-info">
+                            <h2>Stage Développeur Logiciel</h2>
+                            <p>ArianeGroup</p>
+                        </div>
+                    </div>
+                    <div class="timeline-details">
+                        <ul>
+                            <li>Développement d’un logiciel en langage Python permettant de générer des fichiers de test de continuité et d’isolement électrique</li>
+                            <li>Réalisation d’un script convertissant des fichiers .tsv en .xml</li>
+                            <li>Robustification des données d’entrée</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item right" data-company="ArianeGroup" onclick="toggleTimeline(this)">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">Depuis Sept 2025</div>
+                <div class="timeline-card">
+                    <div class="timeline-card-header">
+                        <img class="timeline-logo" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="Logo entreprise">
+                        <div class="timeline-card-info">
+                            <h2>Apprenti Développeur Logiciel</h2>
+                            <p>ArianeGroup</p>
+                        </div>
+                    </div>
+                    <div class="timeline-details">
+                        <ul>
+                            <li>Développement d’un logiciel en langage Python permettant de valider la conformité des soudures des réservoirs du premier étage Ariane 6</li>
+                            <li>Conception d’algorithmes de contrôle basés sur l’analyse dimensionnelles (angles, dimensions, profondeur) des soudures à partir de données capteurs</li>
+                            <li>Mise en place d’un pipeline de traitement de données industrielles : nettoyage, filtrage, analyse et calcul</li>
+                            <li>Maintenance et évolution du logiciel développé lors de mon stage (correctifs, optimisation et amélioration des fonctionnalités)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="rocket-launcher" id="rocket-launcher">
+            <div class="rocket-smoke smoke-1"></div>
+            <div class="rocket-smoke smoke-2"></div>
+            <div class="rocket-smoke smoke-3"></div>
+            <div class="rocket-smoke smoke-4"></div>
+            <div class="rocket-smoke smoke-5"></div>
+            <div class="rocket-smoke smoke-6"></div>
+            <img class="rocket-image" src="img/Ariane6.png" alt="Fusée en lancement">
+        </div>
     </section>
     <section class="projects"> 
         <h1>Mes projets</h1>
@@ -85,6 +179,15 @@
 
         <div class="container">
             <div class="image-gallery">
+
+                <img src="img/U-A.png" alt="U-Activity"
+                data-link="https://u-activity.abdelrahimriche.com/auth"
+                data-description="U-Activity est la plateforme de référence pour répertorier et accéder à toutes les activités sportives et culturelles de l'université. Explorez l'offre disponible et planifiez votre parcours en fonction de vos passions et de vos disponibilités sur le campus. Grâce à son système de gestion intégré, inscrivez-vous facilement aux sessions et suivez votre participation en un clic."
+                data-time="8 mois"
+                data-members="6 personnes"
+                data-role="Responsable de la BDD / Développeur backend"
+                data-langage="<i class='fa-brands fa-square-js'></i> <i class='fa-solid fa-database'></i>">
+
                 <img src="img/traviaV2.png" alt="travia"
                 data-link="https://dfrancekie.fr/test/index.php"
                 data-description="Travia est une plateforme innovante de réservation de billets pour voyager entre les planètes, directement inspirée de l’univers de Star Wars. Que ce soit à bord d’une navette interstellaire ou avec votre propre vaisseau, vous pourrez explorer la galaxie en tenant compte de l’autonomie de votre appareil et des alégeances des différentes planètes. "
@@ -191,7 +294,12 @@
     <!-- Section des compétences -->
     <section class="skills">
         <h1>Mes Compétences</h1>
-        <div class="skills-container">
+        <div class="skills-year-selector">
+            <button class="year-btn active" data-year="but2">BUT 2</button>
+            <button class="year-btn" data-year="but3">BUT 3</button>
+        </div>
+
+        <div class="skills-container" id="skills-but2">
             <div class="skill-box">
                 <div class="skill-inner">
                     <div class="skill-front">
@@ -287,6 +395,57 @@
                 </div>
             </div>
         </div>
+
+        <div class="skills-container" id="skills-but3" style="display: none;">
+            <div class="skill-box">
+                <div class="skill-inner">
+                    <div class="skill-front">
+                        <h3>Réaliser</h3>
+                        <p>Développer, concevoir, coder, tester et intégrer une solution informatique pour un client</p>
+                        <button class="discover-btn1">Découvrir</button>
+                    </div>
+                    
+
+- 
+                    <div class="skill-back">
+                        <p>AC31.01 | Choisir et implémenter les architectures adaptées</p>
+                        <p>AC31.02 | Faire évoluer une application existante</p>
+                        <p>AC31.03 | Intégrer des solutions dans un environnement de production</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-box">
+                <div class="skill-inner">
+                    <div class="skill-front">
+                        <h3>Optimiser</h3>
+                        <p>Proposer des applications informatiques optimisées en fonction de critères spécifiques : temps d'exécution, précision, consommation de ressources...</p>
+                        <button class="discover-btn2">Découvrir</button>
+                    </div>
+                    <div class="skill-back">
+                        <p>AC32.01 | Anticiper les résultats de diverses métriques (temps d’exécution, occupation mémoire, montée en charge...)</p> 
+                        <p>AC32.02 | Profiler, analyser et justifier le comportement d’un code existant</p>
+                        <p>AC32.03 | Choisir et utiliser des bibliothèques et méthodes dédiées au domaine d'application (imagerie, immersion, intelligence artificielle, jeux vidéos, parallélisme, calcul formel...)</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-box">
+                <div class="skill-inner">
+                    <div class="skill-front">
+                        <h3>Collaborer</h3>
+                        <p>Acquérir, développer et exploiter les aptitudes nécessaires pour travailler efficacement dans une équipe informatiques</p>
+                        <button class="discover-btn3">Découvrir</button>
+                    </div>
+                    <div class="skill-back">
+                        <p>AC36.01 | Comprendre la diversité, la structure et la dimension de l'informatique dans une organisation</p>
+                        <p>AC36.02 | Identifier les enjeux de l’économie de l’innovation numérique</p>
+                        <p>AC36.03 | Guider la conduite du changement informatique au sein d’une organisation</p>
+                        <p>AC36.04 | Accompagner le management de projet informatique</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <div class="popup" id="popup">
@@ -303,10 +462,33 @@
     </div>
 
     <script>
+        // Gestion du switcher BUT 2 / BUT 3
+        const yearBtns = document.querySelectorAll('.year-btn');
+        const skillsContainers = {
+            but2: document.getElementById('skills-but2'),
+            but3: document.getElementById('skills-but3')
+        };
+
+        yearBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                yearBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                
+                const year = btn.dataset.year;
+                Object.values(skillsContainers).forEach(container => container.style.display = 'none');
+                skillsContainers[year].style.display = 'grid';
+                
+                // Réinitialise les skills boxes flippées
+                document.querySelectorAll(".skill-box").forEach(skill => {
+                    skill.classList.remove("flipped");
+                });
+            });
+        });
+
         // Sélectionne toutes les compétences
         document.querySelectorAll(".skill-box").forEach(skill => {
             skill.addEventListener("click", () => {
-                skill.classList.toggle("flipped"); // Ajoute ou retire la classe flipped
+                skill.classList.toggle("flipped");
             });
         });
     </script>
@@ -370,11 +552,39 @@
         const container = document.querySelector('.container');
         const prevBtn = document.querySelector('.prev');
         const nextBtn = document.querySelector('.next');
+        const projectsSection = document.querySelector('.projects');
 
         function updateArrows() {
-            prevBtn.style.display = container.scrollLeft > 0 ? 'block' : 'none';
-            nextBtn.style.display = (container.scrollLeft + container.clientWidth) < container.scrollWidth ? 'block' : 'none';
+            if (container.scrollLeft > 0) {
+                prevBtn.classList.add('visible');
+            } else {
+                prevBtn.classList.remove('visible');
+            }
+            
+            if ((container.scrollLeft + container.clientWidth) < container.scrollWidth) {
+                nextBtn.classList.add('visible');
+            } else {
+                nextBtn.classList.remove('visible');
+            }
         }
+
+        // Intersection Observer pour afficher/cacher les flèches au survol de la section projets
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    updateArrows();
+                } else {
+                    prevBtn.classList.remove('visible');
+                    nextBtn.classList.remove('visible');
+                }
+            });
+        }, observerOptions);
+
+        observer.observe(projectsSection);
 
         prevBtn.addEventListener('click', () => {
             container.scrollBy({ left: -300, behavior: 'smooth' });
@@ -385,23 +595,14 @@
         });
 
         container.addEventListener('scroll', updateArrows);
-        updateArrows();
     </script>
 
     <script>
-        // Sélection des boutons "Découvrir"
-const discoverBtn1 = document.querySelector('.discover-btn1');
-const discoverBtn2 = document.querySelector('.discover-btn2');
-const discoverBtn3 = document.querySelector('.discover-btn3');
-const discoverBtn4 = document.querySelector('.discover-btn4');
-const discoverBtn5 = document.querySelector('.discover-btn5');
-const discoverBtn6 = document.querySelector('.discover-btn6');
-
-// Sélection des éléments de la pop-up
-const popup = document.getElementById('popup');
-const popupTitle = document.getElementById('popup-title');
-const popupDescription = document.getElementById('popup-description');
-const closePopup = document.querySelector('.close-popup');
+        // Sélection des éléments de la pop-up
+        const popup = document.getElementById('popup');
+        const popupTitle = document.getElementById('popup-title');
+        const popupDescription = document.getElementById('popup-description');
+        const closePopup = document.querySelector('.close-popup');
 
 // Description des compétences avec des informations différentes
 const skillDescriptions = {
@@ -501,36 +702,48 @@ function showPopup(skillKey) {
     }
 }
 
-// Ajout des événements aux boutons
-discoverBtn1.addEventListener('click', function(event) {
-    event.stopPropagation(); // Empêche la propagation du clic à la carte
-    showPopup("realiser");
-});
+// Ajout des événements à tous les boutons découvrir
+        document.querySelectorAll('.discover-btn1').forEach(btn => {
+            btn.addEventListener('click', function(event) {
+                event.stopPropagation();
+                showPopup("realiser");
+            });
+        });
 
-discoverBtn2.addEventListener('click', function(event) {
-    event.stopPropagation();
-    showPopup("optimiser");
-});
+        document.querySelectorAll('.discover-btn2').forEach(btn => {
+            btn.addEventListener('click', function(event) {
+                event.stopPropagation();
+                showPopup("optimiser");
+            });
+        });
 
-discoverBtn3.addEventListener('click', function(event) {
-    event.stopPropagation();
-    showPopup("administrer");
-});
+        document.querySelectorAll('.discover-btn3').forEach(btn => {
+            btn.addEventListener('click', function(event) {
+                event.stopPropagation();
+                showPopup("administrer");
+            });
+        });
 
-discoverBtn4.addEventListener('click', function(event) {
-    event.stopPropagation();
-    showPopup("gerer");
-});
+        document.querySelectorAll('.discover-btn4').forEach(btn => {
+            btn.addEventListener('click', function(event) {
+                event.stopPropagation();
+                showPopup("gerer");
+            });
+        });
 
-discoverBtn5.addEventListener('click', function(event) {
-    event.stopPropagation();
-    showPopup("conduire");
-});
+        document.querySelectorAll('.discover-btn5').forEach(btn => {
+            btn.addEventListener('click', function(event) {
+                event.stopPropagation();
+                showPopup("conduire");
+            });
+        });
 
-discoverBtn6.addEventListener('click', function(event) {
-    event.stopPropagation();
-    showPopup("collaborer");
-});
+        document.querySelectorAll('.discover-btn6').forEach(btn => {
+            btn.addEventListener('click', function(event) {
+                event.stopPropagation();
+                showPopup("collaborer");
+            });
+        });
 
 // Ferme la pop-up en cliquant sur la croix
 closePopup.addEventListener('click', () => {
@@ -575,6 +788,31 @@ popup.addEventListener('click', (e) => {
         // Activer le premier point par défaut
         activatePoint(timelinePoints[0]);
     });
+
+    function launchRocket() {
+        const rocket = document.getElementById('rocket-launcher');
+        if (!rocket) return;
+        rocket.classList.remove('active');
+        void rocket.offsetWidth;
+        rocket.classList.add('active');
+        if (window.rocketTimeout) {
+            clearTimeout(window.rocketTimeout);
+        }
+        window.rocketTimeout = setTimeout(() => {
+            rocket.classList.remove('active');
+        }, 1800);
+    }
+
+    function toggleTimeline(element) {
+    // Si tu veux qu'une seule carte s'ouvre à la fois, décommente les deux lignes suivantes :
+    // document.querySelectorAll('.timeline-item').forEach(item => {
+    //    if(item !== element) item.classList.remove('expanded'); });
+
+        element.classList.toggle('expanded');
+        if (element.dataset.company === 'ArianeGroup') {
+            launchRocket();
+        }
+    }
 </script>
 
 <footer class="footer">
@@ -591,6 +829,8 @@ popup.addEventListener('click', (e) => {
         </div>
     </div>
 </footer>
+
+
 
 </body>
 </html>

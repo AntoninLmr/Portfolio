@@ -41,6 +41,11 @@ body {
     scrollbar-width: none;
     scroll-padding-left: 0;
     margin-top: 5%;
+    background: black;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    padding: 20px;
 }
 @keyframes wave-scroll {
     0% { transform: translateY(0px); }
@@ -59,7 +64,11 @@ body {
     object-fit: cover;
     filter: brightness(50%);
     transition: filter 0.3s ease;
+    border-radius: 12px;
+    border: 2px solid #3498db;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.4);
 }
+
 .image-gallery img:hover {
     filter: brightness(100%);
 }
@@ -91,6 +100,32 @@ body {
     line-height: 1.5;
     color: white; 
     margin-top: 5%;
+}
+
+/* Bouton CV */
+.cv-btn {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 8px 16px;
+    background: linear-gradient(135deg, #1e90ff, #00bfff);
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.cv-btn:hover,
+.cv-btn:focus {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.45);
+    background: linear-gradient(135deg, #00bfff, #1e90ff);
+}
+
+.cv-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.35);
 }
 
 .container-presentation {
@@ -160,28 +195,82 @@ body {
 
 /*Partie flèche java script*/
 .nav-arrow {
-    position: absolute;
-    top: 220%;
+    position: fixed;
+    top: 38%;
     transform: translateY(-50%);
     background: white;
     border: none;
-    font-size: px;
+    font-size: 16px;
+    width: 36px;
+    height: 36px;
     cursor: pointer;
     border-radius: 50%;
     transition: 0.3s;
     z-index: 10;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-arrow.visible {
+    display: flex;
 }
 
 .nav-arrow:hover {
     background: rgba(255, 255, 255, 0.8);
+    transform: translateY(-50%) scale(1.1);
 }
 
 .prev {
-    left: 20px;
+    left: 15px;
 }
 
 .next {
-    right: 20px;
+    right: 15px;
+}
+
+/* Adaptation responsive des flèches */
+@media (max-width: 1024px) {
+    .nav-arrow {
+        top: 37%;
+        width: 34px;
+        height: 34px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-arrow {
+        top: 36%;
+        width: 32px;
+        height: 32px;
+        font-size: 14px;
+    }
+    
+    .next {
+        right: 10px;
+    }
+    
+    .prev {
+        left: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-arrow {
+        top: 35%;
+        width: 30px;
+        height: 30px;
+        font-size: 12px;
+    }
+    
+    .next {
+        right: 8px;
+    }
+    
+    .prev {
+        left: 8px;
+    }
 }
 
 /*Projects*/
@@ -295,8 +384,37 @@ body {
     text-align: center;
     font-size: 2.5rem;
     margin-top: 8%;
-    margin-bottom: 5%;
-    
+    margin-bottom: 3%;
+}
+
+.skills-year-selector {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.year-btn {
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: 2px solid #3498db;
+    background: transparent;
+    color: #3498db;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.year-btn:hover {
+    background: #3498db;
+    color: black;
+    transform: scale(1.05);
+}
+
+.year-btn.active {
+    background: #3498db;
+    color: black;
 }
 
 .skills-container {
@@ -724,10 +842,11 @@ body {
 .timeline-content {
     max-width: 600px;
     margin: 30px auto;
-    background-color: white;
-    border-radius: 8px;
+    background-color: #1a1a1a;
+    border: 2px solid #3498db;
+    border-radius: 12px;
     padding: 20px;
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
     opacity: 0;
     transform: translateY(20px);
     transition: all 0.5s ease;
@@ -739,18 +858,23 @@ body {
     opacity: 1;
     transform: translateY(0);
     height: auto;
-    min-height: 150px;
+    min-height: auto;
 }
 
 .timeline-content h2 {
-    color: #2c3e50;
+    color: white;
     margin-bottom: 10px;
+}
+
+.timeline-content p,
+.timeline-content ul,
+.timeline-content li {
+    color: white;
 }
 
 .timeline-content ul {
     margin-left: 20px;
     margin-bottom: 10px;
-    color: black;
 }
 
 @media (max-width: 768px) {
@@ -823,6 +947,15 @@ body {
     .skills-container {
         grid-template-columns: 1fr; 
         gap: 20px; 
+    }
+
+    .skills-year-selector {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .year-btn {
+        width: 100%;
     }
 
     .skill-box {
@@ -1034,6 +1167,334 @@ body {
 .cv-btn:active {
     transform: scale(0.95); /* Réduction légère au clic */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Container de la timeline verticale */
+.timeline-v {
+    position: relative;
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 20px 0;
+}
+
+.rocket-launcher {
+    position: fixed;
+    left: 50%;
+    bottom: 20px;
+    width: 180px;
+    height: 260px;
+    transform: translateX(-50%) scale(1);
+    opacity: 0;
+    pointer-events: none;
+    z-index: 2000;
+}
+
+.rocket-launcher.active {
+    animation: rocket-takeoff 1.8s ease-out forwards;
+}
+
+.rocket-launcher img.rocket-image {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 140px;
+    max-width: 100%;
+    height: auto;
+    filter: drop-shadow(0 0 24px rgba(255,255,255,0.95)) drop-shadow(0 0 40px rgba(255,165,0,0.9));
+    z-index: 2;
+}
+
+.rocket-smoke {
+    position: absolute;
+    left: 50%;
+    bottom: 16px;
+    width: 30px;
+    height: 30px;
+    background: radial-gradient(circle, rgba(255,255,255,0.96) 0%, rgba(255,255,255,0.75) 30%, rgba(255,255,255,0.12) 100%);
+    border-radius: 50%;
+    opacity: 0;
+    transform: translateX(-50%) scale(0.5);
+    filter: blur(3px);
+}
+
+.rocket-smoke.smoke-1 {
+    left: 49%;
+    bottom: 18px;
+    width: 28px;
+    height: 28px;
+}
+
+.rocket-smoke.smoke-2 {
+    left: 51%;
+    bottom: 14px;
+    width: 38px;
+    height: 38px;
+}
+
+.rocket-smoke.smoke-3 {
+    left: 48%;
+    bottom: 10px;
+    width: 52px;
+    height: 52px;
+}
+
+.rocket-smoke.smoke-4 {
+    left: 53%;
+    bottom: 6px;
+    width: 66px;
+    height: 66px;
+}
+
+.rocket-smoke.smoke-5 {
+    left: 47%;
+    bottom: 4px;
+    width: 84px;
+    height: 84px;
+}
+
+.rocket-smoke.smoke-6 {
+    left: 50%;
+    bottom: 2px;
+    width: 104px;
+    height: 104px;
+}
+
+.rocket-launcher.active .rocket-smoke.smoke-1 {
+    animation: smoke-rise 1.4s ease-out 0s forwards;
+}
+
+.rocket-launcher.active .rocket-smoke.smoke-2 {
+    animation: smoke-rise 1.5s ease-out 0.05s forwards;
+}
+
+.rocket-launcher.active .rocket-smoke.smoke-3 {
+    animation: smoke-rise 1.6s ease-out 0.08s forwards;
+}
+
+.rocket-launcher.active .rocket-smoke.smoke-4 {
+    animation: smoke-rise 1.7s ease-out 0.1s forwards;
+}
+
+.rocket-launcher.active .rocket-smoke.smoke-5 {
+    animation: smoke-rise 1.8s ease-out 0.12s forwards;
+}
+
+.rocket-launcher.active .rocket-smoke.smoke-6 {
+    animation: smoke-rise 2s ease-out 0.14s forwards;
+}
+
+@keyframes smoke-rise {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(0) scale(0.6);
+    }
+    15% {
+        opacity: 1;
+    }
+    45% {
+        opacity: 0.7;
+        transform: translateX(-50%) translateY(50px) scale(1);
+    }
+    90% {
+        opacity: 0.3;
+        transform: translateX(-50%) translateY(120px) scale(1.4);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(140px) scale(1.6);
+    }
+}
+
+@keyframes rocket-takeoff {
+    0% {
+        bottom: 20px;
+        opacity: 1;
+        transform: translateX(-50%) scale(1);
+    }
+    18% {
+        bottom: 48px;
+        transform: translateX(-50%) scale(1.2);
+    }
+    40% {
+        bottom: 130px;
+        transform: translateX(-50%) scale(1.1);
+        opacity: 0.95;
+    }
+    65% {
+        bottom: 260px;
+        opacity: 0.8;
+    }
+    90% {
+        bottom: 420px;
+        opacity: 0.5;
+        transform: translateX(-50%) scale(0.8);
+    }
+    100% {
+        bottom: 140%;
+        opacity: 0;
+        transform: translateX(-50%) scale(0.6);
+    }
+}
+
+/* La ligne centrale */
+.timeline-v__line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: #3498db;
+    transform: translateX(-50%);
+}
+
+/* Un bloc d'item */
+.timeline-item {
+    position: relative;
+    width: 50%;
+    padding: 10px 16px;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+/* Alternance gauche / droite */
+.timeline-item.left { left: 0; text-align: right; }
+.timeline-item.right { left: 50%; text-align: left; }
+
+/* Le point sur la ligne */
+.timeline-dot {
+    position: absolute;
+    top: 24px;
+    width: 20px;
+    height: 20px;
+    background: #3498db;
+    border: 4px solid black;
+    border-radius: 50%;
+    z-index: 10;
+}
+.left .timeline-dot { right: -12px; }
+.right .timeline-dot { left: -12px; }
+
+/* La carte (le carré) */
+.timeline-card {
+    background: #1a1a1a;
+    padding: 18px;
+    border-radius: 12px;
+    border: 2px solid #3498db;
+    min-height: auto;
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.timeline-card h2 { color: #3498db; margin: 0 0 8px 0; font-size: 1rem; }
+.timeline-date { font-weight: bold; color: white; margin-bottom: 10px; font-size: 0.9rem; }
+
+.timeline-card p {
+    font-size: 0.88rem;
+    line-height: 1.4;
+}
+
+.timeline-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 12px;
+}
+
+.timeline-card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.timeline-card-info {
+    text-align: left;
+}
+
+.timeline-card-info h2 {
+    margin: 0 0 4px;
+}
+
+.timeline-card-info p {
+    margin: 0;
+    color: #ddd;
+    font-size: 0.9rem;
+}
+
+.timeline-card .timeline-logo {
+    display: block;
+    width: 56px;
+    height: 56px;
+    object-fit: contain;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.15);
+    background-color: rgba(255,255,255,0.08);
+}
+
+.timeline-item.left .timeline-card {
+    margin-right: 10px;
+}
+
+.timeline-item.right .timeline-card {
+    margin-left: 10px;
+}
+
+/* Contenu caché par défaut pour l'agrandissement */
+.timeline-details {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+    opacity: 0;
+    text-align: left;
+}
+
+/* État agrandi lors du clic */
+.timeline-item.expanded {
+    z-index: 20;
+    width: 90%;
+    left: 5% !important;
+    transition: all 0.35s ease;
+}
+
+.timeline-item.expanded .timeline-card {
+    background: #2c3e50;
+    transform: scale(1.08);
+    box-shadow: 0 12px 26px rgba(0, 0, 0, 0.35);
+    padding: 30px;
+    min-height: auto;
+}
+
+.timeline-item.expanded .timeline-details {
+    max-height: 420px;
+    opacity: 1;
+    margin-top: 15px;
+}
+
+.timeline-item.expanded .timeline-card h2 {
+    font-size: 1rem;
+}
+
+.timeline-item.expanded .timeline-card .timeline-details ul {
+    margin-top: 10px;
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.timeline-item.expanded .timeline-card p {
+    color: #e2e2e2;
+    line-height: 1.4;
+}
+
+
+/* Mobile : tout mettre sur une seule colonne */
+@media (max-width: 768px) {
+    .timeline-v__line { left: 20px; }
+    .timeline-item { width: 100%; text-align: left; padding-left: 50px; }
+    .timeline-item.right { left: 0; }
+    .timeline-dot { left: 8px !important; }
 }
 
 
